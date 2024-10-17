@@ -8,6 +8,10 @@ const questions = [
       options: ["Sim", "Não!"],
     },
     {
+      text: "Você aceita que eu te amo mais?",
+      options: ["Sim", "Não!"],
+    },
+    {
       text: "Então, quer ser minha namorada?",
       options: ["Sim", "Não!"],
     },

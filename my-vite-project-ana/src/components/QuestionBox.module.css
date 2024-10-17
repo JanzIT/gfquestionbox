@@ -7,6 +7,10 @@
     margin: 0 auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
+
+  .body {
+    display: flex;
+  }
   
   .answerButton {
     background-color: #f08a5d;

@@ -8,7 +8,13 @@ const QuestionBox = () => {
   return (
     <div 
       className={styles.questionBox} 
-      style={{ position: 'absolute', top: position.top, left: position.left, transform: 'translate(-50%, -50%)' }} 
+      style={{ 
+        background: 'linear-gradient(135deg, #ff7e7f, #02f)', 
+        position: 'absolute', 
+        top: position.top, 
+        left: position.left, 
+        transform: 'translate(-50%, -50%)' 
+      }} 
     >
       <p>{currentQuestion.text}</p>
       <div>

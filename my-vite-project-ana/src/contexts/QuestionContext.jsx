@@ -10,25 +10,30 @@ export const QuestionProvider = ({ children }) => {
 
   const handleAnswer = (answer) => {
     if (answer === "Não!") {
+      const topPosition = Math.min(Math.max(Math.random() * 80, 10), 80); //para não fugir da viewport
+      const leftPosition = Math.min(Math.max(Math.random() * 80, 10), 80); //para não fugir da viewport
+
       setPosition({
-        top: `${Math.random() * 80}vh`, 
-        left: `${Math.random() * 80}vw`, 
+        top: `${topPosition}vh`,
+        left: `${leftPosition}vw`,
       });
-      return; 
+      return;
+    }
+
+    if (answer === "Sim") {
+      setPosition({ top: "50%", left: "50%" });
     }
 
     const nextQuestion = questionService.getNextQuestion(answer);
-    
-  
+
     if (nextQuestion === "move") {
       return;
     }
 
-    
     if (nextQuestion) {
       setCurrentQuestion(nextQuestion);
     } else {
-      setIsFinal(true); 
+      setIsFinal(true);
     }
   };
 
